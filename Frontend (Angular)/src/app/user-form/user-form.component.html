@@ -1,0 +1,28 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="stockexchangeId">stockexchangeId</label>
+        <input type="text" [(ngModel)]="user.stockexchangeId" 
+          class="form-control" 
+          id="stockexchangeId" 
+          name="stockexchangeId" 
+          placeholder="Enter your stockexchangeId"
+          required #name="ngModel">
+      </div>
+      <div [hidden]="!name.pristine" class="alert alert-danger">stockexchangeId is required</div>
+      <div class="form-group">
+        <label for="stockExchangeName">stockExchangeName</label>
+        <input type="text" [(ngModel)]="user.stockExchangeName" 
+          class="form-control" 
+          id="stockExchangeName" 
+          name="stockExchangeName" 
+          placeholder="Enter your stockExchangeName"
+          required #stockExchangeName="ngModel">
+        <div [hidden]="!stockExchangeName.pristine" class="alert alert-danger">stockExchangeName is required</div>
+      </div>
+      <button type="submit" [disabled]="!userForm.form.valid" 
+        class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
