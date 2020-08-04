@@ -1,0 +1,1 @@
+insert into STOCKEXCHANGE (ID, STOCK_EXCHANGE_NAME, BRIEF_WRITE_UP, CONTACT_ADDRESS, REMARKS) values(190, 'sample name','sample writeup', 'Sample contact','sample remarks');
